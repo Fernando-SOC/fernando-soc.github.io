@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Cybersegurança - Fernando / SOC</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Tela inicial */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(180deg, #0a0a0a, #1c1c1c);
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+            color: #00d9ff;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: #00d9ff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: auto;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #00d9ff;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+            window.scrollTo(0, 0);
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#" onclick="showSection('sobre')">Sobre Mim</a>
+        <a href="#" onclick="showSection('habilidades')">Habilidades</a>
+        <a href="#" onclick="showSection('projetos')">Projetos</a>
+        <a href="#" onclick="showSection('contato')">Contato</a>
+    </nav>
+</header>
+
+<!-- TELA INICIAL -->
+<div class="hero">
+    <h1>Portfólio Cybersegurança</h1>
+    <h2>Fernando / SOC Analyst</h2>
+    <button onclick="showSection('contratar')">Por que você deveria me contratar?</button>
+</div>
+
+<!-- SEÇÃO NOVA — MOTIVOS PARA CONTRATAR -->
+<section id="contratar">
+    <h2>Por que você deveria me contratar?</h2>
+    <p>
+        Sou um profissional comprometido, disciplinado e apaixonado por tecnologia desde criança. 
+        Tenho experiência prática com SOC, monitoramento, investigação de incidentes, threat hunting, 
+        análise de logs, Linux e ofensiva em Kali Linux.
+    </p>
+
+    <h3>🔵 1. Experiência Real em Segurança</h3>
+    <ul>
+        <li>Monitoramento de alertas e eventos críticos</li>
+        <li>Análise de tráfego suspeito (TCP, UDP, DNS, NAT, Firewall)</li>
+        <li>Investigação de incidentes usando Splunk e sistemas Linux</li>
+        <li>Detecção e resposta a tentativas de invasão</li>
+    </ul>
+
+    <h3>🔵 2. Laboratório Prático Construído por Mim</h3>
+    <p>
+        Montei meu próprio laboratório SOC, com ambientes Linux, ferramentas de ataque e SIEM, 
+        para praticar logs, exploits, ataques e defesa de forma contínua.
+    </p>
+
+    <h3>🔵 3. Perfil que Empresas Valorizam</h3>
+    <ul>
+        <li>Trabalho bem em equipe</li>
+        <li>Aprendo rápido</li>
+        <li>Sou dedicado e busco alta performance</li>
+        <li>Procuro sempre entender como o atacante pensa</li>
+        <li>Forte evolução contínua (estudo todos os dias)</li>
+    </ul>
+
+    <h3>🔵 4. Competências Técnicas</h3>
+    <ul>
+        <li>Linux (Kali, Ubuntu, Debian)</li>
+        <li>Pentest básico e ofensiva</li>
+        <li>Splunk SIEM</li>
+        <li>Análise de alertas e logs</li>
+        <li>Virtualização (VirtualBox / VMware)</li>
+        <li>Redes (TCP/IP, OSI, Firewall, NAT)</li>
+    </ul>
+
+    <h3>🔵 5. Comunicação Profissional e Maturidade</h3>
+    <p>
+        Tenho foco, disciplina, boa comunicação e maturidade emocional para trabalhar sob pressão.  
+        Busco entregar valor real e ajudar a reduzir riscos de segurança.
+    </p>
+
+    <h3>🔵 Conclusão</h3>
+    <p>
+        Você deveria me contratar porque sou um profissional que entrega resultado, aprende rápido, 
+        tem experiência prática e vive segurança todos os dias.  
+        Tenho paixão verdadeira pela área e isso reflete na minha evolução constante.
+    </p>
+</section>
+
+<!-- SEÇÃO SOBRE MIM -->
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+        Sou Fernando Costa de Oliveira, Analista SOC com foco em monitoramento, segurança ofensiva 
+        e resposta a incidentes.  
+        Apaixonado por tecnologia desde criança, hoje atuo analisando logs, investigando ameaças e criando 
+        soluções em cibersegurança para ambientes corporativos.
+    </p>
+</section>
+
+<!-- SEÇÃO HABILIDADES -->
+<section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+        <li>Monitoramento SOC</li>
+        <li>Segurança Ofensiva (Pentest)</li>
+        <li>Investigação e análise de logs</li>
+        <li>Kali Linux / Ferramentas de Hacking</li>
+        <li>Segurança em redes</li>
+        <li>Linux Server</li>
+        <li>Virtualização / VMs</li>
+    </ul>
+</section>
+
+<!-- SEÇÃO PROJETOS -->
+<section id="projetos">
+    <h2>Projetos</h2>
+    <ul>
+        <li>🔒 Laboratório SOC com Análise de Logs</li>
+        <li>🛡️ Ataques simulados em Kali Linux</li>
+        <li>📊 SIEM com alertas customizados</li>
+    </ul>
+</section>
+
+<!-- SEÇÃO CONTATO -->
+<section id="contato">
+    <h2>Contato</h2>
+    <p><strong>Email:</strong> fernandomax2005@hotmail.com</p>
+    <p><strong>GitHub:</strong> github.com/fernando-soc</p>
+</section>
+
+</body>
+</html>
